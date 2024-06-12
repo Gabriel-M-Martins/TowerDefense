@@ -21,24 +21,32 @@ extension GameScene {
         } while !children.allSatisfy({ !$0.intersects(camp) })
         
         
+        let obstacles = SKNode.obstacles(fromNodeBounds: [camp])
+        if obstacles.isEmpty || obstacles.count > 1 { return }
+        camp.obstacle = obstacles[0]
+        camps.insert(camp)
+        pathfindingGraph.addObstacles(obstacles)
+        
+        Animations.spawn(on: camp)
         addChild(camp)
-//        pathfindingGraph.addObstacles(SKNode.obstacles(fromNodeBounds: [camp]))
 
         DispatchQueue.global(qos: .userInteractive).async { [weak self] in
             guard let self, let targetPoint = city.findValidSpawningPoint() else {
-                DispatchQueue.main.async {
-                    Animations.despawn(on: camp)
-                }
+                self?.despawnCamp(camp)
                 return
             }
             
             let hasValidPathToCity = camp.pathfind(to: targetPoint, on: pathfindingGraph)
-            if !hasValidPathToCity {
-                DispatchQueue.main.async {
-                    Animations.despawn(on: camp)
-                }
-                print("doesn't have path")
-            }
+            if !hasValidPathToCity { self.despawnCamp(camp) }
+        }
+    }
+    
+    internal func despawnCamp(_ camp: Camp) {
+        DispatchQueue.main.async {
+            Animations.despawn(on: camp)
+            self.camps.remove(camp)
+            guard let obstacle = camp.obstacle else { return }
+            self.pathfindingGraph.removeObstacles([obstacle])
         }
     }
 }

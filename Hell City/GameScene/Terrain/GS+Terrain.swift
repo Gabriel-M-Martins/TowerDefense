@@ -27,27 +27,26 @@ extension GameScene {
         
         let obstacles = SKNode.obstacles(fromNodeBounds: nodes)
         pathfindingGraph.addObstacles(obstacles)
-        
-        let colors: [UIColor] = [.black, .brown, .cyan, .green]
-        for obstacle in pathfindingGraph.obstacles {
-//            let path = CGMutablePath()
-//            path.move(to: CGPoint(x: CGFloat(obstacle.vertex(at: 0).x), y: CGFloat(obstacle.vertex(at: 0).y)))
-            for i in 0..<obstacle.vertexCount {
-                let vertex = obstacle.vertex(at: i)
-                let f = SKShapeNode(circleOfRadius: 10)
-                f.fillColor = colors[i % colors.count]
-                f.position = .init(x: CGFloat(vertex.x), y: CGFloat(vertex.y))
-                addChild(f)
-//                path.addLine(to: CGPoint(x: CGFloat(vertex.x), y: CGFloat(vertex.y)))
-            }
-//            path.closeSubpath()
+//        let colors: [UIColor] = [.black, .brown, .cyan, .green]
+//        for obstacle in pathfindingGraph.obstacles {
+////            let path = CGMutablePath()
+////            path.move(to: CGPoint(x: CGFloat(obstacle.vertex(at: 0).x), y: CGFloat(obstacle.vertex(at: 0).y)))
+//            for i in 0..<obstacle.vertexCount {
+//                let vertex = obstacle.vertex(at: i)
+//                let f = SKShapeNode(circleOfRadius: 10)
+//                f.fillColor = colors[i % colors.count]
+//                f.position = .init(x: CGFloat(vertex.x), y: CGFloat(vertex.y))
+//                addChild(f)
+////                path.addLine(to: CGPoint(x: CGFloat(vertex.x), y: CGFloat(vertex.y)))
+//            }
+////            path.closeSubpath()
+////            
+////            let shape = SKShapeNode(path: path)
+////            shape.strokeColor = .cyan
+////            shape.lineWidth = 4.0
+////            
+////            addChild(shape)
 //            
-//            let shape = SKShapeNode(path: path)
-//            shape.strokeColor = .cyan
-//            shape.lineWidth = 4.0
-//            
-//            addChild(shape)
-            
-        }
+//        }
     }
 }

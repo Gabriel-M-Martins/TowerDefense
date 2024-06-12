@@ -25,7 +25,9 @@ class GameScene: SKScene, ObservableObject {
     
     internal var city: City?
     
-    internal var pathfindingGraph: GKObstacleGraph = .init(obstacles: [], bufferRadius: 1.0)
+    internal var camps: Set<Camp> = []
+    
+    internal var pathfindingGraph: GKObstacleGraph = .init(obstacles: [], bufferRadius: 100)
     
     override func didMove(to view: SKView) {
         self.backgroundColor = Tokens.Colors.background

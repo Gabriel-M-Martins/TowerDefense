@@ -26,12 +26,13 @@ extension GameScene {
         
         let isOverlappingNodes = !children.allSatisfy({ !$0.intersects(node!) })
         if !isOverlappingNodes {
-            addChild(node!)
             gameState = .inGame
             city = node
             
             let obstacles = SKNode.obstacles(fromNodeBounds: [node!])
             pathfindingGraph.addObstacles(obstacles)
+            Animations.spawn(on: node!)
+            addChild(node!)
             
             return true
         }

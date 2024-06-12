@@ -30,5 +30,10 @@ extension GameScene {
                 spawnCamp()
             }
         }
+        
+        // TODO: Spawn rates etc.
+        for camp in self.camps {
+            camp.spawn()
+        }
     }
 }

@@ -24,7 +24,6 @@ class City: SKSpriteNode {
         self.name = Names.city.name
         
         self.zPosition = Layers.normal.layer
-        Animations.spawn(on: self)
     }
     
     required init?(coder aDecoder: NSCoder) {
