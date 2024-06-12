@@ -11,7 +11,7 @@ import SwiftUI
 struct Hell_CityApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            GameView()
         }
     }
 }

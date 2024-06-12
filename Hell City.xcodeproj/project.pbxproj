@@ -8,18 +8,62 @@
 
 /* Begin PBXBuildFile section */
 		A795C1012C0F68AE008C8AE2 /* Hell_CityApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A795C1002C0F68AE008C8AE2 /* Hell_CityApp.swift */; };
-		A795C1032C0F68AE008C8AE2 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A795C1022C0F68AE008C8AE2 /* ContentView.swift */; };
+		A795C1032C0F68AE008C8AE2 /* GameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A795C1022C0F68AE008C8AE2 /* GameView.swift */; };
 		A795C1052C0F68AF008C8AE2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A795C1042C0F68AF008C8AE2 /* Assets.xcassets */; };
 		A795C1092C0F68AF008C8AE2 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A795C1082C0F68AF008C8AE2 /* Preview Assets.xcassets */; };
+		A795C1112C0F68CD008C8AE2 /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = A795C1102C0F68CD008C8AE2 /* GameScene.swift */; };
+		A795C1142C0F69A4008C8AE2 /* GS+Terrain.swift in Sources */ = {isa = PBXBuildFile; fileRef = A795C1132C0F69A4008C8AE2 /* GS+Terrain.swift */; };
+		A795C1162C0F69AA008C8AE2 /* Terrain.swift in Sources */ = {isa = PBXBuildFile; fileRef = A795C1152C0F69AA008C8AE2 /* Terrain.swift */; };
+		A795C1182C0F69C7008C8AE2 /* GameSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = A795C1172C0F69C7008C8AE2 /* GameSettings.swift */; };
+		A795C11A2C0F6A80008C8AE2 /* Tokens.swift in Sources */ = {isa = PBXBuildFile; fileRef = A795C1192C0F6A80008C8AE2 /* Tokens.swift */; };
+		A795C11D2C0F77E5008C8AE2 /* GS+Gestures.swift in Sources */ = {isa = PBXBuildFile; fileRef = A795C11C2C0F77E5008C8AE2 /* GS+Gestures.swift */; };
+		A795C1202C0F8511008C8AE2 /* GS+City.swift in Sources */ = {isa = PBXBuildFile; fileRef = A795C11F2C0F8511008C8AE2 /* GS+City.swift */; };
+		A795C1222C0F8517008C8AE2 /* City.swift in Sources */ = {isa = PBXBuildFile; fileRef = A795C1212C0F8517008C8AE2 /* City.swift */; };
+		A795C1242C0F8557008C8AE2 /* InputState.swift in Sources */ = {isa = PBXBuildFile; fileRef = A795C1232C0F8557008C8AE2 /* InputState.swift */; };
+		A795C1262C0F89AE008C8AE2 /* GS+Camera.swift in Sources */ = {isa = PBXBuildFile; fileRef = A795C1252C0F89AE008C8AE2 /* GS+Camera.swift */; };
+		A795C1282C0F8B7C008C8AE2 /* GS+InputState.swift in Sources */ = {isa = PBXBuildFile; fileRef = A795C1272C0F8B7C008C8AE2 /* GS+InputState.swift */; };
+		A7B586F12C10AC7B00553DC8 /* Math.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7B586F02C10AC7B00553DC8 /* Math.swift */; };
+		A7B586F32C1207C900553DC8 /* Names.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7B586F22C1207C900553DC8 /* Names.swift */; };
+		A7D796812C100C1C003A18E0 /* GS+Camp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7D796802C100C1C003A18E0 /* GS+Camp.swift */; };
+		A7D796832C100C23003A18E0 /* Camp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7D796822C100C23003A18E0 /* Camp.swift */; };
+		A7D796852C100C8D003A18E0 /* GS+Tick.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7D796842C100C8D003A18E0 /* GS+Tick.swift */; };
+		A7F2248A2C10020E009D781F /* Animations.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7F224892C10020E009D781F /* Animations.swift */; };
+		A7F2248C2C1004FF009D781F /* GS+UI.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7F2248B2C1004FF009D781F /* GS+UI.swift */; };
+		A7F2248E2C100546009D781F /* Layers.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7F2248D2C100546009D781F /* Layers.swift */; };
+		A7F224922C10071F009D781F /* GS+GameState.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7F224912C10071F009D781F /* GS+GameState.swift */; };
+		A7F224942C100726009D781F /* GameState.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7F224932C100726009D781F /* GameState.swift */; };
+		A7F224972C100A5B009D781F /* Label.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7F224962C100A5B009D781F /* Label.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		A795C0FD2C0F68AE008C8AE2 /* Hell City.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Hell City.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A795C1002C0F68AE008C8AE2 /* Hell_CityApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Hell_CityApp.swift; sourceTree = "<group>"; };
-		A795C1022C0F68AE008C8AE2 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		A795C1022C0F68AE008C8AE2 /* GameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameView.swift; sourceTree = "<group>"; };
 		A795C1042C0F68AF008C8AE2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A795C1062C0F68AF008C8AE2 /* Hell_City.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Hell_City.entitlements; sourceTree = "<group>"; };
 		A795C1082C0F68AF008C8AE2 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		A795C1102C0F68CD008C8AE2 /* GameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
+		A795C1132C0F69A4008C8AE2 /* GS+Terrain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "GS+Terrain.swift"; sourceTree = "<group>"; };
+		A795C1152C0F69AA008C8AE2 /* Terrain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Terrain.swift; sourceTree = "<group>"; };
+		A795C1172C0F69C7008C8AE2 /* GameSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameSettings.swift; sourceTree = "<group>"; };
+		A795C1192C0F6A80008C8AE2 /* Tokens.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tokens.swift; sourceTree = "<group>"; };
+		A795C11C2C0F77E5008C8AE2 /* GS+Gestures.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "GS+Gestures.swift"; sourceTree = "<group>"; };
+		A795C11F2C0F8511008C8AE2 /* GS+City.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "GS+City.swift"; sourceTree = "<group>"; };
+		A795C1212C0F8517008C8AE2 /* City.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = City.swift; sourceTree = "<group>"; };
+		A795C1232C0F8557008C8AE2 /* InputState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputState.swift; sourceTree = "<group>"; };
+		A795C1252C0F89AE008C8AE2 /* GS+Camera.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "GS+Camera.swift"; sourceTree = "<group>"; };
+		A795C1272C0F8B7C008C8AE2 /* GS+InputState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "GS+InputState.swift"; sourceTree = "<group>"; };
+		A7B586F02C10AC7B00553DC8 /* Math.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Math.swift; sourceTree = "<group>"; };
+		A7B586F22C1207C900553DC8 /* Names.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Names.swift; sourceTree = "<group>"; };
+		A7D796802C100C1C003A18E0 /* GS+Camp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "GS+Camp.swift"; sourceTree = "<group>"; };
+		A7D796822C100C23003A18E0 /* Camp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Camp.swift; sourceTree = "<group>"; };
+		A7D796842C100C8D003A18E0 /* GS+Tick.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "GS+Tick.swift"; sourceTree = "<group>"; };
+		A7F224892C10020E009D781F /* Animations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Animations.swift; sourceTree = "<group>"; };
+		A7F2248B2C1004FF009D781F /* GS+UI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "GS+UI.swift"; sourceTree = "<group>"; };
+		A7F2248D2C100546009D781F /* Layers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Layers.swift; sourceTree = "<group>"; };
+		A7F224912C10071F009D781F /* GS+GameState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "GS+GameState.swift"; sourceTree = "<group>"; };
+		A7F224932C100726009D781F /* GameState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameState.swift; sourceTree = "<group>"; };
+		A7F224962C100A5B009D781F /* Label.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Label.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,6 +77,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A7453C832C1001AB00B5A688 /* Misc */ = {
+			isa = PBXGroup;
+			children = (
+				A7F224892C10020E009D781F /* Animations.swift */,
+				A7F2248D2C100546009D781F /* Layers.swift */,
+				A7F224962C100A5B009D781F /* Label.swift */,
+				A7B586F02C10AC7B00553DC8 /* Math.swift */,
+				A7B586F22C1207C900553DC8 /* Names.swift */,
+			);
+			path = Misc;
+			sourceTree = "<group>";
+		};
 		A795C0F42C0F68AE008C8AE2 = {
 			isa = PBXGroup;
 			children = (
@@ -53,7 +109,9 @@
 			isa = PBXGroup;
 			children = (
 				A795C1002C0F68AE008C8AE2 /* Hell_CityApp.swift */,
-				A795C1022C0F68AE008C8AE2 /* ContentView.swift */,
+				A795C1022C0F68AE008C8AE2 /* GameView.swift */,
+				A795C10F2C0F68BF008C8AE2 /* GameScene */,
+				A795C11B2C0F6A84008C8AE2 /* Design */,
 				A795C1042C0F68AF008C8AE2 /* Assets.xcassets */,
 				A795C1062C0F68AF008C8AE2 /* Hell_City.entitlements */,
 				A795C1072C0F68AF008C8AE2 /* Preview Content */,
@@ -67,6 +125,78 @@
 				A795C1082C0F68AF008C8AE2 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		A795C10F2C0F68BF008C8AE2 /* GameScene */ = {
+			isa = PBXGroup;
+			children = (
+				A795C1102C0F68CD008C8AE2 /* GameScene.swift */,
+				A795C1172C0F69C7008C8AE2 /* GameSettings.swift */,
+				A795C11C2C0F77E5008C8AE2 /* GS+Gestures.swift */,
+				A795C1252C0F89AE008C8AE2 /* GS+Camera.swift */,
+				A7F2248B2C1004FF009D781F /* GS+UI.swift */,
+				A7D796842C100C8D003A18E0 /* GS+Tick.swift */,
+				A7F224902C1006D9009D781F /* GameState */,
+				A7F2248F2C1006C7009D781F /* InputState */,
+				A795C11E2C0F8503008C8AE2 /* City */,
+				A795C1122C0F6993008C8AE2 /* Terrain */,
+				A7F224952C100A3F009D781F /* Camp */,
+				A7453C832C1001AB00B5A688 /* Misc */,
+			);
+			path = GameScene;
+			sourceTree = "<group>";
+		};
+		A795C1122C0F6993008C8AE2 /* Terrain */ = {
+			isa = PBXGroup;
+			children = (
+				A795C1132C0F69A4008C8AE2 /* GS+Terrain.swift */,
+				A795C1152C0F69AA008C8AE2 /* Terrain.swift */,
+			);
+			path = Terrain;
+			sourceTree = "<group>";
+		};
+		A795C11B2C0F6A84008C8AE2 /* Design */ = {
+			isa = PBXGroup;
+			children = (
+				A795C1192C0F6A80008C8AE2 /* Tokens.swift */,
+			);
+			path = Design;
+			sourceTree = "<group>";
+		};
+		A795C11E2C0F8503008C8AE2 /* City */ = {
+			isa = PBXGroup;
+			children = (
+				A795C11F2C0F8511008C8AE2 /* GS+City.swift */,
+				A795C1212C0F8517008C8AE2 /* City.swift */,
+			);
+			path = City;
+			sourceTree = "<group>";
+		};
+		A7F2248F2C1006C7009D781F /* InputState */ = {
+			isa = PBXGroup;
+			children = (
+				A795C1272C0F8B7C008C8AE2 /* GS+InputState.swift */,
+				A795C1232C0F8557008C8AE2 /* InputState.swift */,
+			);
+			path = InputState;
+			sourceTree = "<group>";
+		};
+		A7F224902C1006D9009D781F /* GameState */ = {
+			isa = PBXGroup;
+			children = (
+				A7F224912C10071F009D781F /* GS+GameState.swift */,
+				A7F224932C100726009D781F /* GameState.swift */,
+			);
+			path = GameState;
+			sourceTree = "<group>";
+		};
+		A7F224952C100A3F009D781F /* Camp */ = {
+			isa = PBXGroup;
+			children = (
+				A7D796802C100C1C003A18E0 /* GS+Camp.swift */,
+				A7D796822C100C23003A18E0 /* Camp.swift */,
+			);
+			path = Camp;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -139,8 +269,30 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A795C1032C0F68AE008C8AE2 /* ContentView.swift in Sources */,
+				A795C1112C0F68CD008C8AE2 /* GameScene.swift in Sources */,
+				A795C1142C0F69A4008C8AE2 /* GS+Terrain.swift in Sources */,
+				A795C1182C0F69C7008C8AE2 /* GameSettings.swift in Sources */,
+				A795C1202C0F8511008C8AE2 /* GS+City.swift in Sources */,
+				A795C11D2C0F77E5008C8AE2 /* GS+Gestures.swift in Sources */,
+				A7F224972C100A5B009D781F /* Label.swift in Sources */,
+				A7D796852C100C8D003A18E0 /* GS+Tick.swift in Sources */,
+				A7B586F12C10AC7B00553DC8 /* Math.swift in Sources */,
+				A795C1162C0F69AA008C8AE2 /* Terrain.swift in Sources */,
+				A7F2248A2C10020E009D781F /* Animations.swift in Sources */,
+				A7F224922C10071F009D781F /* GS+GameState.swift in Sources */,
+				A7F2248E2C100546009D781F /* Layers.swift in Sources */,
+				A795C1222C0F8517008C8AE2 /* City.swift in Sources */,
+				A7F2248C2C1004FF009D781F /* GS+UI.swift in Sources */,
+				A795C1032C0F68AE008C8AE2 /* GameView.swift in Sources */,
+				A7D796832C100C23003A18E0 /* Camp.swift in Sources */,
+				A795C1262C0F89AE008C8AE2 /* GS+Camera.swift in Sources */,
+				A7D796812C100C1C003A18E0 /* GS+Camp.swift in Sources */,
+				A7B586F32C1207C900553DC8 /* Names.swift in Sources */,
 				A795C1012C0F68AE008C8AE2 /* Hell_CityApp.swift in Sources */,
+				A795C1282C0F8B7C008C8AE2 /* GS+InputState.swift in Sources */,
+				A7F224942C100726009D781F /* GameState.swift in Sources */,
+				A795C11A2C0F6A80008C8AE2 /* Tokens.swift in Sources */,
+				A795C1242C0F8557008C8AE2 /* InputState.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -267,6 +419,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = "Hell City/Hell_City.entitlements";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Hell City/Preview Content\"";
@@ -274,16 +427,19 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "Hell City";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.strategy-games";
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphonesimulator*]" = YES;
+				INFOPLIST_KEY_UIRequiresFullScreen = YES;
+				INFOPLIST_KEY_UIStatusBarHidden = YES;
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphoneos*]" = UIStatusBarStyleDefault;
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
@@ -292,7 +448,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.gmm.Hell-City";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -305,6 +462,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = "Hell City/Hell_City.entitlements";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Hell City/Preview Content\"";
@@ -312,16 +470,19 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "Hell City";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.strategy-games";
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphonesimulator*]" = YES;
+				INFOPLIST_KEY_UIRequiresFullScreen = YES;
+				INFOPLIST_KEY_UIStatusBarHidden = YES;
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphoneos*]" = UIStatusBarStyleDefault;
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
@@ -330,7 +491,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.gmm.Hell-City";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
