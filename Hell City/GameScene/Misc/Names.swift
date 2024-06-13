@@ -8,7 +8,7 @@
 import Foundation
 
 enum Names: String {
-    case city, camp, terrain
+    case city, camp, terrain, enemy
     
     var name: String { self.rawValue }
 }

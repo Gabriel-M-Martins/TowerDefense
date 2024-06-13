@@ -34,6 +34,9 @@ class GameScene: SKScene, ObservableObject {
         self.anchorPoint = .init(x: 0.5, y: 0.5)
         self.physicsWorld.gravity = CGVector(dx: 0.0, dy: 0.0)
         
+        let n = Enemy(10)
+        addChild(n)
+        
         setupCamera(view)
         
         setupGestures(view)

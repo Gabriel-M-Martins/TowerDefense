@@ -10,7 +10,7 @@ import SpriteKit
 
 class City: SKSpriteNode {
     init() {
-        let texture = Tokens.Textures.house
+        let texture = Tokens.Textures.Buildings.house
         let originalSize = texture.size()
         let multiplier: CGFloat = 1
         let size: CGSize = .init(width: originalSize.width * multiplier, height: originalSize.height * multiplier)

@@ -10,7 +10,7 @@ import SpriteKit
 
 class Terrain: SKSpriteNode {
     init() {
-        let texture = [Tokens.Textures.boulder1, Tokens.Textures.boulder2, Tokens.Textures.boulder3, Tokens.Textures.tree].randomElement()!
+        let texture = [Tokens.Textures.Terrain.boulder1, Tokens.Textures.Terrain.boulder2, Tokens.Textures.Terrain.boulder3, Tokens.Textures.Terrain.tree].randomElement()!
         let originalSize = texture.size()
         let multiplier: CGFloat = 1
         let size: CGSize = .init(width: originalSize.width * multiplier, height: originalSize.height * multiplier)

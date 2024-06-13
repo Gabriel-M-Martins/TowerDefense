@@ -37,7 +37,12 @@ extension GameScene {
             }
             
             let hasValidPathToCity = camp.pathfind(to: targetPoint, on: pathfindingGraph)
-            if !hasValidPathToCity { self.despawnCamp(camp) }
+            if !hasValidPathToCity {
+                self.despawnCamp(camp)
+                return
+            }
+            
+            redoPathfinding(becauseOf: camp)
         }
     }
     
@@ -47,6 +52,36 @@ extension GameScene {
             self.camps.remove(camp)
             guard let obstacle = camp.obstacle else { return }
             self.pathfindingGraph.removeObstacles([obstacle])
+        }
+    }
+    
+    fileprivate func redoPathfinding(becauseOf camp: Camp) {
+        DispatchQueue.global().async { [weak self] in
+            guard let self else { return }
+            let right = camp.position.x + camp.size.width/2
+            let left = camp.position.x - camp.size.width/2
+            let up = camp.position.y + camp.size.height/2
+            let down = camp.position.y - camp.size.height/2
+            
+            let path = CGMutablePath()
+            path.move(to: .init(x: right, y: up))
+            path.addLine(to: .init(x: right, y: down))
+            path.addLine(to: .init(x: left, y: down))
+            path.addLine(to: .init(x: left, y: up))
+            path.closeSubpath()
+            
+            var campsToRedoPathfinding = [Camp]()
+            for c in self.camps {
+                let intersects = c.pathToCity.intersects(path, using: .winding)
+                if intersects { campsToRedoPathfinding.append(c) }
+            }
+            
+            for camp in campsToRedoPathfinding {
+                let hasValidPathToCity = camp.pathfind(to: camp.goalPoint, on: pathfindingGraph)
+                if !hasValidPathToCity {
+                    self.despawnCamp(camp)
+                }
+            }
         }
     }
 }

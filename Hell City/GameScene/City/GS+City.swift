@@ -31,6 +31,7 @@ extension GameScene {
             
             let obstacles = SKNode.obstacles(fromNodeBounds: [node!])
             pathfindingGraph.addObstacles(obstacles)
+            
             Animations.spawn(on: node!)
             addChild(node!)
             

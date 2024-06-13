@@ -24,6 +24,8 @@
 		A795C1282C0F8B7C008C8AE2 /* GS+InputState.swift in Sources */ = {isa = PBXBuildFile; fileRef = A795C1272C0F8B7C008C8AE2 /* GS+InputState.swift */; };
 		A7B586F12C10AC7B00553DC8 /* Math.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7B586F02C10AC7B00553DC8 /* Math.swift */; };
 		A7B586F32C1207C900553DC8 /* Names.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7B586F22C1207C900553DC8 /* Names.swift */; };
+		A7D53BB12C1A69580071E051 /* Camp+Pathfind.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7D53BB02C1A69580071E051 /* Camp+Pathfind.swift */; };
+		A7D53BB42C1A6A040071E051 /* Enemy.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7D53BB32C1A6A040071E051 /* Enemy.swift */; };
 		A7D796812C100C1C003A18E0 /* GS+Camp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7D796802C100C1C003A18E0 /* GS+Camp.swift */; };
 		A7D796832C100C23003A18E0 /* Camp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7D796822C100C23003A18E0 /* Camp.swift */; };
 		A7D796852C100C8D003A18E0 /* GS+Tick.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7D796842C100C8D003A18E0 /* GS+Tick.swift */; };
@@ -55,6 +57,8 @@
 		A795C1272C0F8B7C008C8AE2 /* GS+InputState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "GS+InputState.swift"; sourceTree = "<group>"; };
 		A7B586F02C10AC7B00553DC8 /* Math.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Math.swift; sourceTree = "<group>"; };
 		A7B586F22C1207C900553DC8 /* Names.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Names.swift; sourceTree = "<group>"; };
+		A7D53BB02C1A69580071E051 /* Camp+Pathfind.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Camp+Pathfind.swift"; sourceTree = "<group>"; };
+		A7D53BB32C1A6A040071E051 /* Enemy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Enemy.swift; sourceTree = "<group>"; };
 		A7D796802C100C1C003A18E0 /* GS+Camp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "GS+Camp.swift"; sourceTree = "<group>"; };
 		A7D796822C100C23003A18E0 /* Camp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Camp.swift; sourceTree = "<group>"; };
 		A7D796842C100C8D003A18E0 /* GS+Tick.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "GS+Tick.swift"; sourceTree = "<group>"; };
@@ -141,6 +145,7 @@
 				A795C11E2C0F8503008C8AE2 /* City */,
 				A795C1122C0F6993008C8AE2 /* Terrain */,
 				A7F224952C100A3F009D781F /* Camp */,
+				A7D53BB22C1A69F60071E051 /* Enemy */,
 				A7453C832C1001AB00B5A688 /* Misc */,
 			);
 			path = GameScene;
@@ -172,6 +177,14 @@
 			path = City;
 			sourceTree = "<group>";
 		};
+		A7D53BB22C1A69F60071E051 /* Enemy */ = {
+			isa = PBXGroup;
+			children = (
+				A7D53BB32C1A6A040071E051 /* Enemy.swift */,
+			);
+			path = Enemy;
+			sourceTree = "<group>";
+		};
 		A7F2248F2C1006C7009D781F /* InputState */ = {
 			isa = PBXGroup;
 			children = (
@@ -195,6 +208,7 @@
 			children = (
 				A7D796802C100C1C003A18E0 /* GS+Camp.swift */,
 				A7D796822C100C23003A18E0 /* Camp.swift */,
+				A7D53BB02C1A69580071E051 /* Camp+Pathfind.swift */,
 			);
 			path = Camp;
 			sourceTree = "<group>";
@@ -271,6 +285,7 @@
 			files = (
 				A795C1112C0F68CD008C8AE2 /* GameScene.swift in Sources */,
 				A795C1142C0F69A4008C8AE2 /* GS+Terrain.swift in Sources */,
+				A7D53BB42C1A6A040071E051 /* Enemy.swift in Sources */,
 				A795C1182C0F69C7008C8AE2 /* GameSettings.swift in Sources */,
 				A795C1202C0F8511008C8AE2 /* GS+City.swift in Sources */,
 				A795C11D2C0F77E5008C8AE2 /* GS+Gestures.swift in Sources */,
@@ -288,6 +303,7 @@
 				A795C1262C0F89AE008C8AE2 /* GS+Camera.swift in Sources */,
 				A7D796812C100C1C003A18E0 /* GS+Camp.swift in Sources */,
 				A7B586F32C1207C900553DC8 /* Names.swift in Sources */,
+				A7D53BB12C1A69580071E051 /* Camp+Pathfind.swift in Sources */,
 				A795C1012C0F68AE008C8AE2 /* Hell_CityApp.swift in Sources */,
 				A795C1282C0F8B7C008C8AE2 /* GS+InputState.swift in Sources */,
 				A7F224942C100726009D781F /* GameState.swift in Sources */,
