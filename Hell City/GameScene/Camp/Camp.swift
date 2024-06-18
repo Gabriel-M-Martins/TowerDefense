@@ -17,9 +17,11 @@ class Camp: SKSpriteNode {
     internal var pathToCity: CGPath = .init(rect: .zero, transform: .none)
     internal var goalPoint: CGPoint = .zero
     
+    internal weak var gsenemy: (any GSEnemy)?
+    
     var obstacle: GKPolygonObstacle?
     
-    init() {
+    init(settings: GameSettings.Camp) {
         let texture = Tokens.Textures.Buildings.camp
         let originalSize = texture.size()
         let multiplier: CGFloat = 1
@@ -28,9 +30,8 @@ class Camp: SKSpriteNode {
         
         super.init(texture: texture, color: .clear, size: size)
 
-        self.name = Names.camp.name
-        
-        self.zPosition = Layers.normal.layer
+        self.name = Names.camp
+        self.zPosition = Layers.normal
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -40,11 +41,6 @@ class Camp: SKSpriteNode {
     
     func spawn() {
         guard isAllowedToSpawn else { return }
-        
-        let f = Enemy()
-        f.position = spawningPoint
-        f.follow(path: pathToCity)
-        
-        parent?.addChild(f)
+        gsenemy?.spawnEnemy(from: self)
     }
 }

@@ -12,7 +12,8 @@ extension GameScene {
     internal func spawnCamp() {
         guard let view, let city else { return }
         
-        let camp: Camp = Camp()
+        let camp: Camp = Camp(settings: settings.camp)
+        camp.gsenemy = self
         repeat {
             let x = CGFloat.random(in: -view.bounds.width*settings.map.scale...view.bounds.width*settings.map.scale)
             let y = CGFloat.random(in: -view.bounds.height*settings.map.scale...view.bounds.height*settings.map.scale)
@@ -29,6 +30,7 @@ extension GameScene {
         
         Animations.spawn(on: camp)
         addChild(camp)
+        nodes[.Camp]?.insert(camp)
 
         DispatchQueue.global(qos: .userInteractive).async { [weak self] in
             guard let self, let targetPoint = city.findValidSpawningPoint() else {
@@ -52,6 +54,7 @@ extension GameScene {
             self.camps.remove(camp)
             guard let obstacle = camp.obstacle else { return }
             self.pathfindingGraph.removeObstacles([obstacle])
+            self.nodes[.Camp]?.remove(camp)
         }
     }
     

@@ -27,16 +27,21 @@ class GameScene: SKScene, ObservableObject {
     
     internal var camps: Set<Camp> = []
     
+    internal var nodes: Dictionary<NodeType, Set<SKNode>> = [
+        .Terrain : [],
+        .Camp : [],
+        .City : [],
+        .Tower : [],
+        .Enemy : [],
+    ]
+    
     internal var pathfindingGraph: GKObstacleGraph = .init(obstacles: [], bufferRadius: 100)
     
     override func didMove(to view: SKView) {
         self.backgroundColor = Tokens.Colors.background
         self.anchorPoint = .init(x: 0.5, y: 0.5)
         self.physicsWorld.gravity = CGVector(dx: 0.0, dy: 0.0)
-        
-        let n = Enemy(10)
-        addChild(n)
-        
+
         setupCamera(view)
         
         setupGestures(view)

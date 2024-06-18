@@ -19,7 +19,7 @@ extension GameScene {
         
         let text = SKLabelNode(text: "Choose where to place your city.")
         text.position.y = -view.frame.height * 0.4
-        text.zPosition = Layers.UI.layer
+        text.zPosition = Layers.UI
         text.name = named
         
         uiElements.updateValue(text, forKey: named)

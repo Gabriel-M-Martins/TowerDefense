@@ -27,5 +27,7 @@ extension GameScene {
         
         let obstacles = SKNode.obstacles(fromNodeBounds: nodes)
         pathfindingGraph.addObstacles(obstacles)
+        
+        self.nodes.updateValue(Set(nodes), forKey: .Terrain)
     }
 }

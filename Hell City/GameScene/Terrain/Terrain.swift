@@ -17,13 +17,13 @@ class Terrain: SKSpriteNode {
         
         super.init(texture: texture, color: .clear, size: size)
         
-        self.name = Names.terrain.name
+        self.name = Names.terrain
         
         let pb = SKPhysicsBody(texture: texture, size: size)
         pb.isDynamic = false
         
         self.physicsBody = pb
-        self.zPosition = Layers.normal.layer
+        self.zPosition = Layers.normal
     }
     
     required init?(coder aDecoder: NSCoder) {

@@ -13,6 +13,8 @@ struct GameSettings {
     var camera: Camera = .init(maxScale: 15, minScale: 1.5, previousPosition: .zero, previousScale: 0)
     var timer: Timer = .init()
     var camp: Camp = .init(maxCamps: 20, timeBetweenSpawningNewCamp: 2)
+    var city: City = .init(health: 200)
+    var enemy: Enemy = .init(health: 20, speed: 200, damage: 1, attackRange: 200)
 }
 
 extension GameSettings {
@@ -39,5 +41,16 @@ extension GameSettings {
     
     struct Timer {
         var time: UInt = 0
+    }
+    
+    struct City {
+        var health: Float
+    }
+    
+    struct Enemy {
+        var health: Float
+        var speed: CGFloat
+        var damage: Float
+        let attackRange: CGFloat
     }
 }

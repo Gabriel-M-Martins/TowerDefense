@@ -21,9 +21,9 @@ class City: SKSpriteNode {
         pb.isDynamic = false
         self.physicsBody = pb
         
-        self.name = Names.city.name
+        self.name = Names.city
         
-        self.zPosition = Layers.normal.layer
+        self.zPosition = Layers.normal
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -31,13 +31,13 @@ class City: SKSpriteNode {
     }
     
     func findValidSpawningPoint() -> CGPoint? {
-        guard let parent else { return nil }
+        guard let scene = parent as? GameScene else { return nil }
         
-        var point: CGPoint
-        repeat {
-            point = Math.getRandomPointOnCircle(radius: Float(size.width) * 1.5, center: position)
-        } while !parent.nodes(at: point).isEmpty
+        for _ in 0..<50 {
+            let point = Math.getRandomPointOnCircle(radius: Float(size.width) * 1.1, center: position)
+            if scene.CheckIfIsValidPosition(against: [.Terrain], at: point) { return point }
+        }
         
-        return point
+        return nil
     }
 }

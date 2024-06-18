@@ -34,17 +34,17 @@ extension Camp {
     }
     
     private func findValidSpawningPoint() -> CGPoint? {
+        guard let scene = parent as? GameScene else { return nil }
         var point: CGPoint
         var angle: Float = 0
         
-        repeat {
+        for _ in 0..<360 {
             angle += 0.5
             point = Math.getPointOnCircle(radius: Float(trueSize.width) * 1.5, center: position, angle: Math.degreesToRadians(angle))
-        } while (!(parent?.nodes(at: point).isEmpty ?? true)) && angle < 360
+            if scene.CheckIfIsValidPosition(against: [.Terrain, .Camp], at: point) { return point }
+        }
         
-        if angle > 360 { return nil }
-        
-        return point
+        return nil
     }
     
     private func convertGraphNodesToPath(_ nodes: [GKGraphNode2D]) -> CGPath? {

@@ -28,29 +28,4 @@ struct Math {
             CGFloat(y) + center.y
         )
     }
-    
-    static func lineIntersectsRect(lineStart: CGPoint, lineEnd: CGPoint, rect: CGRect) -> Bool {
-        let topLeft = CGPoint(x: rect.minX, y: rect.maxY)
-        let topRight = CGPoint(x: rect.maxX, y: rect.maxY)
-        let bottomLeft = CGPoint(x: rect.minX, y: rect.minY)
-        let bottomRight = CGPoint(x: rect.maxX, y: rect.minY)
-        
-        return lineIntersectsLine(lineStart1: lineStart, lineEnd1: lineEnd, lineStart2: topLeft, lineEnd2: topRight) ||
-               lineIntersectsLine(lineStart1: lineStart, lineEnd1: lineEnd, lineStart2: topRight, lineEnd2: bottomRight) ||
-               lineIntersectsLine(lineStart1: lineStart, lineEnd1: lineEnd, lineStart2: bottomRight, lineEnd2: bottomLeft) ||
-               lineIntersectsLine(lineStart1: lineStart, lineEnd1: lineEnd, lineStart2: bottomLeft, lineEnd2: topLeft)
-    }
-
-    static func lineIntersectsLine(lineStart1: CGPoint, lineEnd1: CGPoint, lineStart2: CGPoint, lineEnd2: CGPoint) -> Bool {
-        let denominator = (lineEnd1.x - lineStart1.x) * (lineEnd2.y - lineStart2.y) - (lineEnd1.y - lineStart1.y) * (lineEnd2.x - lineStart2.x)
-        if denominator == 0 {
-            return false
-        }
-        
-        let ua = ((lineStart2.x - lineStart1.x) * (lineEnd2.y - lineStart2.y) - (lineStart2.y - lineStart1.y) * (lineEnd2.x - lineStart2.x)) / denominator
-        let ub = ((lineStart2.x - lineStart1.x) * (lineEnd1.y - lineStart1.y) - (lineStart2.y - lineStart1.y) * (lineEnd1.x - lineStart1.x)) / denominator
-        
-        return ua >= 0 && ua <= 1 && ub >= 0 && ub <= 1
-    }
-
 }
