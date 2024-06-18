@@ -40,6 +40,7 @@ class GameScene: SKScene, ObservableObject {
     override func didMove(to view: SKView) {
         self.backgroundColor = Tokens.Colors.background
         self.anchorPoint = .init(x: 0.5, y: 0.5)
+        self.physicsWorld.contactDelegate = self
         self.physicsWorld.gravity = CGVector(dx: 0.0, dy: 0.0)
 
         setupCamera(view)

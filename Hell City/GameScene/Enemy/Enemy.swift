@@ -27,6 +27,8 @@ class Enemy: SKSpriteNode {
         pb.categoryBitMask = PhysicsMasks.enemy
         pb.contactTestBitMask = 0
         pb.collisionBitMask = PhysicsMasks.enemy
+        pb.allowsRotation = false
+        
         self.physicsBody = pb
         
         self.name = Names.enemy
@@ -34,7 +36,6 @@ class Enemy: SKSpriteNode {
         
         addShadow()
         addSword()
-        addRange()
         
         Animations.spawn(on: self)
     }
@@ -50,7 +51,21 @@ class Enemy: SKSpriteNode {
         ]))
     }
     
-    
+    func startAttacking(_ city: City) {
+        run(
+            .sequence([
+                .run { [weak self] in
+                    guard let self else { return }
+                    let didKillCity = city.takeDamage(settings.damage, from: self)
+                    if didKillCity {
+                        self.removeAction(forKey: "Attack")
+                    }
+                },
+                .wait(forDuration: settings.attackInterval)
+            ]),
+            withKey: "Attack"
+        )
+    }
     
     fileprivate func addShadow() {
         let texture = Tokens.Textures.Characters.shadow
@@ -74,13 +89,5 @@ class Enemy: SKSpriteNode {
         sword.zPosition = 1.0
         
         addChild(sword)
-    }
-    
-    fileprivate func addRange() {
-        let range = SKShapeNode(circleOfRadius: settings.attackRange)
-        range.position = .zero
-        range.strokeColor = .red
-        
-        addChild(range)
     }
 }

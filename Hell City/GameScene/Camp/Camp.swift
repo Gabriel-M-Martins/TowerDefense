@@ -27,8 +27,16 @@ class Camp: SKSpriteNode {
         let multiplier: CGFloat = 1
         let size: CGSize = .init(width: originalSize.width * multiplier, height: originalSize.height * multiplier)
         trueSize = size
-        
+                
         super.init(texture: texture, color: .clear, size: size)
+
+        let pb = SKPhysicsBody(rectangleOf: size)
+        pb.categoryBitMask = PhysicsMasks.camp
+        pb.collisionBitMask = PhysicsMasks.empty
+        pb.contactTestBitMask = PhysicsMasks.empty
+        pb.isDynamic = false
+        
+        self.physicsBody = pb
 
         self.name = Names.camp
         self.zPosition = Layers.normal

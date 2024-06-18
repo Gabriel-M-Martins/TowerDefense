@@ -18,7 +18,7 @@ extension GameScene {
         
         var node = node
         if node == nil {
-            node = City()
+            node = City(settings: settings.city)
         }
         
         inputState = .placing(.city(node))

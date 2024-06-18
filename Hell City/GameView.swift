@@ -13,7 +13,7 @@ struct GameView: View {
     
     var body: some View {
         GeometryReader { reader in
-            SpriteView(scene: scene, debugOptions: [.showsFPS, .showsNodeCount])
+            SpriteView(scene: scene, debugOptions: [.showsFPS, .showsNodeCount, .showsPhysics])
                 .onAppear {
                     scene.size = reader.size
                 }

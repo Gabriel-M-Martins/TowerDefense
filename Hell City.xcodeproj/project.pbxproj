@@ -27,6 +27,7 @@
 		A795C1282C0F8B7C008C8AE2 /* GS+InputState.swift in Sources */ = {isa = PBXBuildFile; fileRef = A795C1272C0F8B7C008C8AE2 /* GS+InputState.swift */; };
 		A7A534852C2128270055BBB7 /* NodeType.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7A534842C2128270055BBB7 /* NodeType.swift */; };
 		A7A534872C212C3F0055BBB7 /* GS+Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7A534862C212C3F0055BBB7 /* GS+Utilities.swift */; };
+		A7A534892C213A9C0055BBB7 /* GS+Contact.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7A534882C213A9C0055BBB7 /* GS+Contact.swift */; };
 		A7B586F32C1207C900553DC8 /* Names.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7B586F22C1207C900553DC8 /* Names.swift */; };
 		A7D53BB12C1A69580071E051 /* Camp+Pathfind.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7D53BB02C1A69580071E051 /* Camp+Pathfind.swift */; };
 		A7D53BB42C1A6A040071E051 /* Enemy.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7D53BB32C1A6A040071E051 /* Enemy.swift */; };
@@ -64,6 +65,7 @@
 		A795C1272C0F8B7C008C8AE2 /* GS+InputState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "GS+InputState.swift"; sourceTree = "<group>"; };
 		A7A534842C2128270055BBB7 /* NodeType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NodeType.swift; sourceTree = "<group>"; };
 		A7A534862C212C3F0055BBB7 /* GS+Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "GS+Utilities.swift"; sourceTree = "<group>"; };
+		A7A534882C213A9C0055BBB7 /* GS+Contact.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "GS+Contact.swift"; sourceTree = "<group>"; };
 		A7B586F22C1207C900553DC8 /* Names.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Names.swift; sourceTree = "<group>"; };
 		A7D53BB02C1A69580071E051 /* Camp+Pathfind.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Camp+Pathfind.swift"; sourceTree = "<group>"; };
 		A7D53BB32C1A6A040071E051 /* Enemy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Enemy.swift; sourceTree = "<group>"; };
@@ -159,6 +161,7 @@
 				A7F2248B2C1004FF009D781F /* GS+UI.swift */,
 				A7D796842C100C8D003A18E0 /* GS+Tick.swift */,
 				A7A534862C212C3F0055BBB7 /* GS+Utilities.swift */,
+				A7A534882C213A9C0055BBB7 /* GS+Contact.swift */,
 				A7F224902C1006D9009D781F /* GameState */,
 				A7F2248F2C1006C7009D781F /* InputState */,
 				A795C11E2C0F8503008C8AE2 /* City */,
@@ -303,6 +306,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A7A534892C213A9C0055BBB7 /* GS+Contact.swift in Sources */,
 				A795C1112C0F68CD008C8AE2 /* GameScene.swift in Sources */,
 				A795C1142C0F69A4008C8AE2 /* GS+Terrain.swift in Sources */,
 				A7D53BB42C1A6A040071E051 /* Enemy.swift in Sources */,

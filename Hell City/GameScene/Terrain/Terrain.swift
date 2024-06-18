@@ -20,6 +20,9 @@ class Terrain: SKSpriteNode {
         self.name = Names.terrain
         
         let pb = SKPhysicsBody(texture: texture, size: size)
+        pb.categoryBitMask = PhysicsMasks.terrain
+        pb.collisionBitMask = PhysicsMasks.empty
+        pb.contactTestBitMask = PhysicsMasks.empty
         pb.isDynamic = false
         
         self.physicsBody = pb
