@@ -96,7 +96,6 @@
 				A7F224892C10020E009D781F /* Animations.swift */,
 				A7783ABC2C1B2C0B00088F83 /* Math.swift */,
 				A7F224962C100A5B009D781F /* Label.swift */,
-				A7A534842C2128270055BBB7 /* NodeType.swift */,
 			);
 			path = Misc;
 			sourceTree = "<group>";
@@ -104,6 +103,7 @@
 		A7783ABE2C1B2C4600088F83 /* Nodes Configs */ = {
 			isa = PBXGroup;
 			children = (
+				A7A534842C2128270055BBB7 /* NodeType.swift */,
 				A7B586F22C1207C900553DC8 /* Names.swift */,
 				A7F2248D2C100546009D781F /* Layers.swift */,
 				A7783ABA2C1B2BD300088F83 /* PhysicsMasks.swift */,
